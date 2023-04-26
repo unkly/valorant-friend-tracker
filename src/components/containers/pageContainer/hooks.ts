@@ -4,16 +4,10 @@ import useSWR from 'swr'
 export function useInjection() {
   const fetcher = async (url: string) => {
     console.log(url)
-    const response = await axios
-      .get(url, {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Headers': 'Access-Control-Allow-Origin',
-        },
-      })
-      .then((res) => {
-        res.data()
-      })
+    const response = await axios.get(url).then((res) => {
+      console.log(res)
+      res.data()
+    })
     return response
   }
   const { data, error, isLoading } = useSWR(
