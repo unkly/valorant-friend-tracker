@@ -8,6 +8,7 @@ export function useInjection() {
       .get(url, {
         headers: {
           'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Headers': '*',
         },
       })
       .then((res) => {
