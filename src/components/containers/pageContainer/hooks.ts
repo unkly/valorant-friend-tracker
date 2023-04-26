@@ -1,12 +1,11 @@
-import axios from 'axios'
 import useSWR from 'swr'
 
 export function useInjection() {
   const fetcher = async (url: string) => {
     console.log(url)
-    const response = await axios.get(url).then((res) => {
+    const response = await fetch(url).then((res) => {
       console.log(res)
-      res.data()
+      res.json()
     })
     return response
   }
