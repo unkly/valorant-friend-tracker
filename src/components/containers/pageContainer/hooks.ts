@@ -8,6 +8,7 @@ export function useInjection() {
       .get(url, {
         headers: {
           'X-Riot-Token': 'RGAPI-9fa0f31d-0253-4927-86ae-096298016563',
+          'Content-Type': 'application/json;charset=utf-8',
         },
       })
       .then((res) => {
