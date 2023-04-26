@@ -6,9 +6,7 @@ export function useInjection() {
     console.log(url)
     const response = await axios
       .get(url, {
-        headers: {
-          'Access-Control-Allow-Headers': '*',
-        },
+        headers: {},
       })
       .then((res) => {
         res.data()
