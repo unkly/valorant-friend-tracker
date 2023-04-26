@@ -1,11 +1,8 @@
 import React from 'react'
+import RootNavigator from './pages/Navigation'
 
 function App() {
-  return (
-    <div className='App'>
-      <h1>hello world</h1>
-    </div>
-  )
+  return <RootNavigator />
 }
 
 export default App
