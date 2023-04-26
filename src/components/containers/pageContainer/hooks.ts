@@ -8,7 +8,7 @@ export function useInjection() {
       .get(url, {
         headers: {
           'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Headers': '*',
+          'Access-Control-Allow-Headers': 'Access-Control-Allow-Origin',
         },
       })
       .then((res) => {
@@ -17,9 +17,7 @@ export function useInjection() {
     return response
   }
   const { data, error, isLoading } = useSWR(
-    [
-      'https://asia.api.riotgames.com/riot/account/v1/accounts/by-riot-id/u7gi/JP1?api_key=RGAPI-9fa0f31d-0253-4927-86ae-096298016563',
-    ],
+    'https://asia.api.riotgames.com/riot/account/v1/accounts/by-riot-id/u7gi/JP1?api_key=RGAPI-9fa0f31d-0253-4927-86ae-096298016563',
     fetcher
   )
   console.log(data)
